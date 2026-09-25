@@ -1,0 +1,6 @@
+# Ayyuq Tech Solutions - Search Engine Directives
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://ayyuq.in/sitemap.xml
