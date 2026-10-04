@@ -1,0 +1,24 @@
+<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Copper/Rust Diagonal Slash -->
+  <path
+    d="M 26 88 L 66 28"
+    stroke="#B2501E"
+    stroke-width="12"
+    stroke-linecap="round"
+  />
+
+  <!-- Right Geometric Dark Monogram Stroke -->
+  <path
+    d="M 70 42 L 54 66 L 82 66 L 96 88 L 48 88"
+    stroke="#161B24"
+    stroke-width="12"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- 4-Point Celestial Star -->
+  <path
+    d="M 84 42 Q 84 52 94 52 Q 84 52 84 62 Q 84 52 74 52 Q 84 52 84 42 Z"
+    fill="#B2501E"
+  />
+</svg>
