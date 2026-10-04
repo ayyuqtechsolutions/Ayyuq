@@ -76,8 +76,8 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
       id="main-navbar-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform ${
         isAtTop
-          ? 'translate-y-0 opacity-100 pointer-events-auto py-5 sm:py-6 bg-[#0A0D08]/95 backdrop-blur-lg border-b-2 border-[#607345]/40 shadow-xl shadow-black/80'
-          : '-translate-y-full opacity-0 pointer-events-none py-3.5'
+          ? 'translate-y-0 opacity-100 pointer-events-auto py-4 bg-[#0A0D08]/95 backdrop-blur-lg border-b-2 border-[#607345]/40 shadow-xl shadow-black/80'
+          : '-translate-y-full opacity-0 pointer-events-none py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -89,11 +89,11 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             onClick={() => handleNavClick('command-center')}
             className="flex items-center group text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 rounded-xl p-1 cursor-pointer transition-transform hover:scale-[1.03]"
           >
-            <AyyuqLogo variant="lockup" size="lg" />
+            <AyyuqLogo variant="lockup" size="md" />
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav id="desktop-nav-menu" className="hidden md:flex items-center gap-7 lg:gap-9 xl:gap-11 text-sm lg:text-[15px] uppercase tracking-[0.16em] font-extrabold text-[#B6CE95]">
+          <nav id="desktop-nav-menu" className="hidden md:flex items-center gap-7 lg:gap-9 text-[13px] uppercase tracking-[0.16em] font-bold text-[#B6CE95]">
             {navItems.map((item) => {
               const isActive = currentPage === item.id;
               return (
@@ -101,10 +101,10 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
                   key={item.id}
                   id={`nav-link-${item.id}`}
                   onClick={() => handleNavClick(item.id)}
-                  className={`relative py-2 px-1 transition-all cursor-pointer ${
+                  className={`relative py-1.5 transition-all cursor-pointer ${
                     isActive
-                      ? 'text-orange-400 font-black border-b-[3px] border-orange-500 pb-1'
-                      : 'text-[#B6CE95] hover:text-orange-400 font-extrabold'
+                      ? 'text-orange-400 font-extrabold border-b-[3px] border-orange-500 pb-1'
+                      : 'text-[#B6CE95] hover:text-orange-400 font-bold'
                   }`}
                 >
                   <span className="font-heading">{item.label}</span>
@@ -115,7 +115,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
 
           {/* Desktop Actions with Indian Time */}
           <div className="hidden lg:flex items-center gap-4">
-            <div className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[#141A10] border border-[#607345]/50 text-[#D8E8C5] text-xs sm:text-sm font-mono font-bold">
+            <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#141A10] border border-[#607345]/50 text-[#D8E8C5] text-xs font-mono font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-[#829A5F] animate-pulse" />
               <span className="text-orange-400 font-black">IST:</span>
               <span>{istTime || '10:00:00 AM'}</span>
@@ -124,7 +124,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             <button
               id="header-scope-cta-btn"
               onClick={() => handleNavClick('launch-pad')}
-              className="px-6 py-3 border-2 border-orange-500 bg-orange-600/20 text-orange-400 text-xs sm:text-sm uppercase tracking-wider font-black hover:bg-orange-500 hover:text-[#0A0D08] cursor-pointer transition-all rounded-xl flex items-center gap-2.5 shadow-lg shadow-orange-950/40"
+              className="px-5 py-2.5 border-2 border-orange-500 bg-orange-600/20 text-orange-400 text-xs uppercase tracking-wider font-black hover:bg-orange-500 hover:text-[#0A0D08] cursor-pointer transition-all rounded-xl flex items-center gap-2 shadow-lg shadow-orange-950/40"
             >
               <span>Get Estimate</span>
               <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -136,17 +136,17 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             <button
               id="header-mobile-scope-btn"
               onClick={() => handleNavClick('launch-pad')}
-              className="px-4 py-2.5 border-2 border-orange-500 bg-orange-600/20 text-orange-400 text-xs sm:text-sm uppercase tracking-wider font-black hover:bg-orange-500 hover:text-[#0A0D08] rounded-xl"
+              className="px-3.5 py-2 border-2 border-orange-500 bg-orange-600/20 text-orange-400 text-xs uppercase tracking-wider font-black hover:bg-orange-500 hover:text-[#0A0D08] rounded-xl"
             >
               Estimate
             </button>
             <button
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-3 rounded-xl bg-[#141A10] border border-[#607345]/40 text-[#D8E8C5] hover:text-orange-400"
+              className="p-2.5 rounded-xl bg-[#141A10] border border-[#607345]/40 text-[#D8E8C5] hover:text-orange-400"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6 stroke-[2.5]" /> : <Menu className="w-6 h-6 stroke-[2.5]" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 stroke-[2.5]" /> : <Menu className="w-5 h-5 stroke-[2.5]" />}
             </button>
           </div>
 

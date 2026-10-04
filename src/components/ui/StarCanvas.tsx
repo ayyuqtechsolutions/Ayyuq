@@ -49,10 +49,10 @@ export default function StarCanvas() {
     }
 
     const starColors = [
-      'rgba(234, 88, 12, ',   // Energetic Orange
-      'rgba(130, 154, 95, ',  // Olive Green
-      'rgba(255, 140, 50, ',  // Warm Celestial Amber
-      'rgba(216, 232, 197, ', // Pale Capella Star White
+      'rgba(234, 88, 12, ',  // Dark Orange
+      'rgba(130, 154, 95, ', // Olive Green
+      'rgba(216, 232, 197, ', // Light Olive Tint
+      'rgba(194, 65, 12, ',  // Deep Orange
     ];
 
     let stars: Star[] = [];
@@ -61,7 +61,7 @@ export default function StarCanvas() {
       stars = [];
       const count = Math.min(Math.floor((width * height) / 8000), 140);
 
-      // Pioneer Leader Star (Al-Ayyuq) - larger, brighter, orange core with olive halo
+      // Pioneer Leader Star (Al-Ayyuq) - larger, brighter, dark orange core with olive halo
       stars.push({
         x: width * 0.72,
         y: height * 0.28,
@@ -141,10 +141,10 @@ export default function StarCanvas() {
 
       // Draw faint background radial glow
       const grad = ctx.createRadialGradient(width / 2, height / 3, 50, width / 2, height / 2, width * 0.7);
-      grad.addColorStop(0, 'rgba(234, 88, 12, 0.08)');
-      grad.addColorStop(0.4, 'rgba(96, 115, 69, 0.05)');
-      grad.addColorStop(0.8, 'rgba(7, 10, 5, 0)');
-      grad.addColorStop(1, 'rgba(7, 10, 5, 0)');
+      grad.addColorStop(0, 'rgba(194, 65, 12, 0.05)');
+      grad.addColorStop(0.4, 'rgba(96, 115, 69, 0.04)');
+      grad.addColorStop(0.8, 'rgba(10, 13, 8, 0.2)');
+      grad.addColorStop(1, 'rgba(10, 13, 8, 0)');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, width, height);
 
@@ -227,7 +227,7 @@ export default function StarCanvas() {
 
           // Label
           ctx.font = '600 11px "Outfit", sans-serif';
-          ctx.fillStyle = '#EA580C';
+          ctx.fillStyle = 'rgba(249, 115, 22, 0.95)';
           ctx.fillText('AL-AYYUQ (α Capella)', star.x + 14, star.y + 4);
         }
       }

@@ -1,9 +1,11 @@
+import { useState, useEffect } from 'react';
 import { PageId } from '../../types';
 import AyyuqLogo from './AyyuqLogo';
 import { 
   Sparkles, 
   ArrowRight, 
   Mail, 
+  Clock, 
   Phone, 
   Instagram, 
   MessageCircle, 
@@ -17,6 +19,23 @@ interface FooterProps {
 
 export default function Footer({ onNavigate }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const [istTime, setIstTime] = useState('');
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setIstTime(now.toLocaleTimeString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+      }));
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <footer id="main-footer" className="relative border-t border-[#607345]/20 bg-[#070A05] overflow-hidden">
@@ -251,8 +270,24 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         </div>
 
+        {/* Sleek Interface Telemetry Bar */}
+        <div className="mt-16 pt-8 border-t border-[#607345]/20 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+          <div>
+            <div className="text-[10px] text-[#607345] uppercase tracking-widest font-bold">LIVE TIME (IST)</div>
+            <div className="text-xl font-bold font-mono tracking-tighter text-orange-400">{istTime || '10:00 AM'}</div>
+          </div>
+          <div>
+            <div className="text-[10px] text-[#607345] uppercase tracking-widest font-bold">CURRENCY</div>
+            <div className="text-xl font-bold font-mono tracking-tighter text-[#D8E8C5]">₹ <span className="text-orange-500">INR</span></div>
+          </div>
+          <div className="flex items-center gap-2 text-[#829A5F]">
+            <span className="w-2 h-2 bg-[#829A5F] rounded-full" />
+            <span className="text-[10px] uppercase tracking-widest font-bold">ALL SYSTEMS HEALTHY</span>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-[#607345]/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[#607345]">
+        <div className="mt-8 pt-6 border-t border-[#607345]/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[#607345]">
           <p>© {currentYear} AYYUQ TECH SOLUTIONS. BUILT FOR THE NEXT.</p>
           <div className="flex items-center gap-4 text-[#607345]">
             <span className="hover:text-[#D8E8C5] cursor-pointer">100% Code Ownership</span>

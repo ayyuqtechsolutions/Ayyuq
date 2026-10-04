@@ -43,18 +43,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF3EA] text-[#162213] flex flex-col selection:bg-orange-600/20 selection:text-orange-950 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#070A05] text-[#D8E8C5] flex flex-col selection:bg-orange-600/30 selection:text-orange-200 relative overflow-x-hidden">
       
       {/* Interface Atmospheric Dot Grid Pattern & Ambient Theme Glow */}
       <div 
-        className="fixed inset-0 opacity-40 pointer-events-none z-0" 
+        className="fixed inset-0 opacity-15 pointer-events-none z-0" 
         style={{ 
-          backgroundImage: 'radial-gradient(rgba(217, 93, 57, 0.15) 1px, transparent 1px)', 
+          backgroundImage: 'radial-gradient(#EA580C 1px, transparent 1px)', 
           backgroundSize: '40px 40px' 
         }} 
       />
-      <div className="fixed top-20 right-40 w-96 h-96 bg-orange-500/8 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="fixed bottom-40 left-20 w-80 h-80 bg-[#607345]/10 rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="fixed top-20 right-40 w-96 h-96 bg-orange-700/10 rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="fixed bottom-40 left-20 w-80 h-80 bg-[#3F4C2E]/20 rounded-full blur-[140px] pointer-events-none z-0" />
 
       {/* Ambient Cursor Indicator */}
       <CursorGlow />

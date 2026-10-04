@@ -95,7 +95,7 @@ export default function WebsiteDevelopmentMumbaiPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
 
-      <main className="min-h-screen bg-white text-[#162213] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-[#070A05] text-[#FAFAFA] pt-28 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-24">
           {/* 1. HERO SECTION */}
           <header className="text-center max-w-4xl mx-auto space-y-6 pt-4">

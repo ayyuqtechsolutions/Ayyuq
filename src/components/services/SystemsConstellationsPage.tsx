@@ -16,7 +16,7 @@ interface SystemsConstellationsPageProps {
 
 export default function SystemsConstellationsPage({ onNavigate: _onNavigate, onSelectSystemForScope: _onSelectSystemForScope }: SystemsConstellationsPageProps) {
   return (
-    <div id="systems-constellations-page" className="min-h-screen pt-32 sm:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
+    <div id="systems-constellations-page" className="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-20">
         
         {/* PAGE HEADER */}

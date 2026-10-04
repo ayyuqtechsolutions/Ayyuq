@@ -13,7 +13,7 @@ export default function AyyuqLogo({
   size = 'md',
   className = '',
   showText = true,
-  theme = 'light',
+  theme = 'auto',
 }: AyyuqLogoProps) {
   // Dimensions based on size
   const iconDimensions = {
@@ -36,8 +36,8 @@ export default function AyyuqLogo({
   // Primary Copper / Terracotta from user's official logo
   const copperColor = '#B2501E';
   
-  // Right Monogram Stroke color: on light theme #161B24, on dark theme #D8E8C5
-  const darkStrokeColor = theme === 'dark' ? '#D8E8C5' : '#161B24';
+  // Right Monogram Stroke color: in dark theme #D8E8C5 or #FFFFFF, in light mode #161B24
+  const darkStrokeColor = theme === 'light' ? '#161B24' : '#D8E8C5';
 
   // SVG Icon Mark Component - Exact geometry from official logo
   const LogoMark = ({ markClass = '' }: { markClass?: string }) => (
@@ -86,16 +86,16 @@ export default function AyyuqLogo({
   if (variant === 'full') {
     return (
       <div className={`flex flex-col items-center text-center gap-3 ${className}`}>
-        <div className="relative group p-3 rounded-2xl bg-[#F1F5EB] border border-[#B2501E]/30 shadow-lg">
+        <div className="relative group p-3 rounded-2xl bg-[#141A10] border border-[#B2501E]/30 shadow-2xl backdrop-blur-md">
           <LogoMark markClass={iconDimensions} />
         </div>
         <div className="space-y-1">
-          <div className={`font-heading font-extrabold text-[#161B24] uppercase ${textSize.title}`}>
+          <div className={`font-heading font-extrabold text-[#D8E8C5] uppercase ${textSize.title}`}>
             AYYUQ
           </div>
-          <div className="flex items-center justify-center gap-2 text-[#48593A]">
+          <div className="flex items-center justify-center gap-2 text-[#9BB17B]">
             <span className="w-5 h-[1.5px] bg-[#B2501E] rounded-full" />
-            <span className={`font-sans uppercase font-medium text-[#48593A] ${textSize.subtitle}`}>
+            <span className={`font-sans uppercase font-medium text-[#B6CE95] ${textSize.subtitle}`}>
               Tech Solutions
             </span>
             <span className="w-5 h-[1.5px] bg-[#B2501E] rounded-full" />
@@ -108,10 +108,10 @@ export default function AyyuqLogo({
   // Variant: Badge (Encapsulated in glossy container)
   if (variant === 'badge') {
     return (
-      <div className={`inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white backdrop-blur-md border border-[#607345]/30 shadow-md ${className}`}>
+      <div className={`inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-[#141A10] backdrop-blur-md border border-[#607345]/40 shadow-[0_4px_20px_rgba(0,0,0,0.6)] ${className}`}>
         <LogoMark markClass={iconDimensions} />
         <div className="flex flex-col text-left">
-          <span className={`font-heading font-extrabold text-[#161B24] uppercase leading-tight ${textSize.title}`}>
+          <span className={`font-heading font-extrabold text-[#D8E8C5] uppercase leading-tight ${textSize.title}`}>
             AYYUQ
           </span>
           <div className="flex items-center gap-1.5 mt-0.5">
@@ -131,12 +131,12 @@ export default function AyyuqLogo({
     <div className={`inline-flex items-center gap-2.5 sm:gap-3 ${className}`}>
       <LogoMark markClass={iconDimensions} />
       <div className="flex flex-col justify-center text-left">
-        <span className={`font-heading font-black text-[#161B24] uppercase leading-none ${textSize.title}`}>
+        <span className={`font-heading font-black text-[#D8E8C5] uppercase leading-none ${textSize.title}`}>
           AYYUQ
         </span>
         <div className="flex items-center gap-1.5 mt-1">
           <span className="w-3 h-[1.5px] bg-[#B2501E] shrink-0" />
-          <span className={`font-sans font-semibold text-[#48593A] uppercase ${textSize.subtitle}`}>
+          <span className={`font-sans font-medium text-[#9BB17B] uppercase ${textSize.subtitle}`}>
             Tech Solutions
           </span>
           <span className="w-3 h-[1.5px] bg-[#B2501E] shrink-0" />

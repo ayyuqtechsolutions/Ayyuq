@@ -149,7 +149,7 @@ Sent from Ayyuq Tech Solutions Contact Portal`;
   };
 
   return (
-    <div id="transmission-page" className="min-h-screen pt-32 sm:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
+    <div id="transmission-page" className="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-16">
         
         {/* PAGE HEADER */}

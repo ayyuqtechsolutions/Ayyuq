@@ -3,6 +3,7 @@ import { PageId } from '../../types';
 import StarCanvas from '../ui/StarCanvas';
 import ArchitectureToggle from './ArchitectureToggle';
 import OriginNarrative from './OriginNarrative';
+import CommandCenterFAQ from './CommandCenterFAQ';
 import AyyuqLogo from '../ui/AyyuqLogo';
 import { 
   Sparkles, 
@@ -34,7 +35,7 @@ export default function CommandCenterPage({ onNavigate }: CommandCenterPageProps
     <div id="command-center-page" className="relative min-h-screen">
       
       {/* HERO SECTION WITH INTERACTIVE PIONEER STAR CANVAS */}
-      <section className="relative min-h-[92vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-32 sm:pt-36 pb-16 overflow-hidden">
+      <section className="relative min-h-[92vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-28 pb-16 overflow-hidden">
         
         {/* Star Canvas */}
         <StarCanvas />
@@ -173,6 +174,9 @@ export default function CommandCenterPage({ onNavigate }: CommandCenterPageProps
 
         </div>
       </section>
+
+      {/* FREQUENTLY ASKED QUESTIONS (GLASS-MORPHISM) */}
+      <CommandCenterFAQ onNavigate={onNavigate} />
 
     </div>
   );

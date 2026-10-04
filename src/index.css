@@ -6,26 +6,20 @@
     --font-heading: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
-    /* Theme Palette: Peach/Beige Background with Orange & Olive Accents */
+    /* Theme Palette: Dark Orange & Olive Green */
     --color-dark-orange: #C2410C;
     --color-dark-orange-bright: #EA580C;
     --color-dark-orange-deep: #9A3412;
-    --color-olive: #3F4C2E;
-    --color-olive-dark: #27331C;
-    --color-olive-light: #5A6D42;
-    --color-olive-border: rgba(90, 109, 66, 0.22);
-    --color-bg-peach: #FAF3EA;
-  }
-
-  html {
-    background-color: #FAF3EA;
-    color: #162213;
+    --color-olive: #607345;
+    --color-olive-dark: #3F4C2E;
+    --color-olive-light: #829A5F;
+    --color-olive-border: rgba(130, 154, 95, 0.35);
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #FAF3EA !important;
-    color: #162213 !important;
+    background-color: #0A0D08;
+    color: #D8E8C5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -33,302 +27,87 @@
   h1, h2, h3, h4, h5, h6, .font-heading {
     font-family: var(--font-heading);
     letter-spacing: -0.02em;
-    color: #141E11;
+    color: #E2EED3;
   }
 
   code, pre, .font-mono {
     font-family: var(--font-mono);
-    color: #384725;
+    color: #B6CE95;
   }
 }
 
-/* ========================================================
-   LANDING PAGE HERO STARS SECTION:
-   Kept 100% Celestial Dark Space (#070A05 / #0A0D08)
-   per user instruction: "the landing page the stars pulling section
-   keep that bg black only what it was earlier"
-   ======================================================== */
-
-#hero-stars-section,
-.hero-stars-dark {
-  background-color: #070A05 !important;
-  color: #D8E8C5 !important;
-}
-
-#hero-stars-section h1,
-#hero-stars-section .font-heading {
-  color: #D8E8C5 !important;
-}
-
-#hero-stars-section [class*="text-[#D8E8C5]"],
-#hero-stars-section .text-\[\#D8E8C5\] {
-  color: #D8E8C5 !important;
-}
-
-#hero-stars-section [class*="text-[#B6CE95]"],
-#hero-stars-section .text-\[\#B6CE95\] {
-  color: #B6CE95 !important;
-}
-
-#hero-stars-section [class*="text-[#9BB17B]"],
-#hero-stars-section .text-\[\#9BB17B\] {
-  color: #9BB17B !important;
-}
-
-#hero-stars-section [class*="text-[#829A5F]"],
-#hero-stars-section .text-\[\#829A5F\] {
-  color: #829A5F !important;
-}
-
-#hero-stars-section .text-orange-500 {
-  color: #F97316 !important;
-}
-
-#hero-stars-section .bg-\[\#0A0D08\],
-#hero-stars-section [class*="bg-[#0A0D08]"] {
-  background-color: rgba(10, 13, 8, 0.92) !important;
-}
-
-#hero-stars-section .bg-\[\#141A10\],
-#hero-stars-section [class*="bg-[#141A10]"] {
-  background-color: #141A10 !important;
-}
-
-#hero-stars-section .bg-orange-600,
-#hero-stars-section [class*="bg-orange-600"] {
-  background-color: #EA580C !important;
-  color: #FFFFFF !important;
-}
-
-#hero-stars-section .bg-orange-600 *,
-#hero-stars-section [class*="bg-orange-600"] * {
-  color: #FFFFFF !important;
-}
-
-.cosmic-radial-glow-hero {
-  background: radial-gradient(circle at 50% 30%, rgba(234, 88, 12, 0.12) 0%, rgba(96, 115, 69, 0.08) 40%, rgba(7, 10, 5, 0) 75%) !important;
-}
-
-/* ========================================================
-   WARM PEACH / BEIGE THEME FOR REST OF WEBSITE
-   ======================================================== */
-
-/* Surface backgrounds outside the hero section */
-:not(#hero-stars-section) > .bg-\[\#070A05\],
-div:not(#hero-stars-section) .bg-\[\#070A05\],
-main:not(#hero-stars-section) .bg-\[\#070A05\],
-section:not(#hero-stars-section) .bg-\[\#070A05\],
-.bg-\[\#070A05\]:not(#hero-stars-section) {
-  background-color: #FAF3EA !important;
-}
-
-:not(#hero-stars-section) > .bg-\[\#0A0D08\],
-div:not(#hero-stars-section) .bg-\[\#0A0D08\],
-main:not(#hero-stars-section) .bg-\[\#0A0D08\],
-section:not(#hero-stars-section) .bg-\[\#0A0D08\],
-.bg-\[\#0A0D08\]:not(#hero-stars-section) {
-  background-color: #FAF3EA !important;
-}
-
-/* Card surfaces: warm clean cream/peach */
-.bg-\[\#0F140D\], 
-[class*="bg-[#0F140D]"] {
-  background-color: #FFFDF9 !important;
-  box-shadow: 0 4px 25px rgba(74, 52, 33, 0.06) !important;
-}
-
-/* Container & pill surfaces: soft warm peach-beige */
-:not(#hero-stars-section) > .bg-\[\#141A10\],
-div:not(#hero-stars-section) .bg-\[\#141A10\],
-main:not(#hero-stars-section) .bg-\[\#141A10\],
-section:not(#hero-stars-section) .bg-\[\#141A10\],
-.bg-\[\#141A10\]:not(#hero-stars-section) {
-  background-color: #F2EAE0 !important;
-}
-
-.bg-\[\#1C2518\],
-[class*="bg-[#1C2518]"] {
-  background-color: #EBE1D4 !important;
-}
-
-/* Typography on peach/beige background (outside hero section) */
-:not(#hero-stars-section) > .text-\[\#D8E8C5\],
-div:not(#hero-stars-section) .text-\[\#D8E8C5\],
-main:not(#hero-stars-section) .text-\[\#D8E8C5\],
-section:not(#hero-stars-section) .text-\[\#D8E8C5\],
-.text-\[\#D8E8C5\]:not(#hero-stars-section) {
-  color: #162213 !important;
-}
-
-:not(#hero-stars-section) > .text-\[\#E2EED3\],
-div:not(#hero-stars-section) .text-\[\#E2EED3\],
-main:not(#hero-stars-section) .text-\[\#E2EED3\],
-section:not(#hero-stars-section) .text-\[\#E2EED3\],
-.text-\[\#E2EED3\]:not(#hero-stars-section) {
-  color: #0C140A !important;
-}
-
-:not(#hero-stars-section) > .text-\[\#FAFAFA\],
-div:not(#hero-stars-section) .text-\[\#FAFAFA\],
-main:not(#hero-stars-section) .text-\[\#FAFAFA\],
-section:not(#hero-stars-section) .text-\[\#FAFAFA\],
-.text-\[\#FAFAFA\]:not(#hero-stars-section) {
-  color: #0C140A !important;
-}
-
-:not(#hero-stars-section) > .text-\[\#B6CE95\],
-div:not(#hero-stars-section) .text-\[\#B6CE95\],
-main:not(#hero-stars-section) .text-\[\#B6CE95\],
-section:not(#hero-stars-section) .text-\[\#B6CE95\],
-.text-\[\#B6CE95\]:not(#hero-stars-section) {
-  color: #2F3E26 !important;
-}
-
-:not(#hero-stars-section) > .text-\[\#9BB17B\],
-div:not(#hero-stars-section) .text-\[\#9BB17B\],
-main:not(#hero-stars-section) .text-\[\#9BB17B\],
-section:not(#hero-stars-section) .text-\[\#9BB17B\],
-.text-\[\#9BB17B\]:not(#hero-stars-section) {
-  color: #48593A !important;
-}
-
-:not(#hero-stars-section) > .text-\[\#829A5F\],
-div:not(#hero-stars-section) .text-\[\#829A5F\],
-main:not(#hero-stars-section) .text-\[\#829A5F\],
-section:not(#hero-stars-section) .text-\[\#829A5F\],
-.text-\[\#829A5F\]:not(#hero-stars-section) {
-  color: #3E512B !important;
-}
-
-/* Orange text contrast enhancement on peach/beige */
-.text-orange-400 {
-  color: #C2410C !important;
-}
-.text-orange-500:not(#hero-stars-section .text-orange-500) {
-  color: #EA580C !important;
-}
-
-/* Primary orange buttons - keep text white and crisp */
-.bg-orange-600, 
-.bg-orange-500, 
-[class*="bg-orange-600"], 
-[class*="bg-orange-500"] {
-  color: #FFFFFF !important;
-}
-.bg-orange-600 *, 
-.bg-orange-500 * {
-  color: #FFFFFF !important;
-}
-
-/* Subtle Olive & Orange Borders for Peach/Beige Theme */
-.border-\[\#607345\]\/40,
-.border-\[\#607345\]\/30,
-.border-\[\#607345\]\/25,
-.border-\[\#607345\]\/20,
-.border-\[\#607345\]\/50 {
-  border-color: rgba(90, 109, 66, 0.22) !important;
-}
-
-.border-orange-600\/30,
-.border-orange-600\/40,
-.border-orange-600\/20 {
-  border-color: rgba(234, 88, 12, 0.28) !important;
-}
-
-/* Form inputs & textareas */
-input:not([type="checkbox"]):not([type="radio"]), 
-textarea, 
-select {
-  background-color: #FFFDF9 !important;
-  color: #162213 !important;
-  border-color: rgba(96, 115, 69, 0.28) !important;
-}
-input::placeholder, 
-textarea::placeholder {
-  color: #7B8A72 !important;
-}
-input:focus, 
-textarea:focus, 
-select:focus {
-  background-color: #FFFFFF !important;
-  border-color: #EA580C !important;
-}
-
-/* Custom Earthy Cosmic Panels & Glassmorphism on Peach/Beige */
+/* Custom Earthy Cosmic Panels & Glassmorphism */
 .glass-panel {
-  background-color: rgba(255, 253, 249, 0.94) !important;
+  background-color: rgba(10, 13, 8, 0.9);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(96, 115, 69, 0.2) !important;
-  box-shadow: 0 4px 25px rgba(74, 52, 33, 0.05) !important;
+  border: 1px solid rgba(130, 154, 95, 0.25);
 }
 
 .glass-panel-orange {
-  background: radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.1) 0%, rgba(255, 253, 249, 0.96) 70%) !important;
+  background: radial-gradient(circle at 50% 0%, rgba(194, 65, 12, 0.16) 0%, rgba(10, 13, 8, 0.95) 70%);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(234, 88, 12, 0.25) !important;
-  box-shadow: 0 4px 25px rgba(234, 88, 12, 0.07) !important;
+  border: 1px solid rgba(234, 88, 12, 0.35);
 }
 
 .glass-panel-olive {
-  background: radial-gradient(circle at 50% 0%, rgba(96, 115, 69, 0.09) 0%, rgba(255, 253, 249, 0.96) 70%) !important;
+  background: radial-gradient(circle at 50% 0%, rgba(96, 115, 69, 0.2) 0%, rgba(10, 13, 8, 0.95) 70%);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(96, 115, 69, 0.22) !important;
-  box-shadow: 0 4px 25px rgba(96, 115, 69, 0.05) !important;
+  border: 1px solid rgba(130, 154, 95, 0.35);
 }
 
 .glass-panel-amber {
-  background: radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.1) 0%, rgba(255, 253, 249, 0.96) 70%) !important;
+  background: radial-gradient(circle at 50% 0%, rgba(194, 65, 12, 0.18) 0%, rgba(10, 13, 8, 0.95) 70%);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(234, 88, 12, 0.25) !important;
+  border: 1px solid rgba(234, 88, 12, 0.35);
 }
 
 .cosmic-grid-pattern {
   background-size: 40px 40px;
-  background-image: radial-gradient(rgba(217, 93, 57, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(#607345 1px, transparent 1px);
 }
 
 .cosmic-radial-glow {
-  background: radial-gradient(circle at 50% 30%, rgba(234, 88, 12, 0.07) 0%, rgba(96, 115, 69, 0.05) 40%, rgba(250, 243, 234, 0) 70%) !important;
+  background: radial-gradient(circle at 50% 30%, rgba(194, 65, 12, 0.14) 0%, rgba(96, 115, 69, 0.1) 40%, rgba(10, 13, 8, 0) 70%);
 }
 
 /* Sleek Dark Orange & Olive Interface Buttons */
 .sleek-btn-primary {
   background-color: #EA580C;
-  color: #FFFFFF !important;
+  color: #0A0D08;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.75rem;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 4px 20px rgba(194, 65, 12, 0.35);
+  box-shadow: 0 4px 20px rgba(194, 65, 12, 0.4);
 }
 
 .sleek-btn-primary:hover {
   background-color: #FF7A1A;
-  box-shadow: 0 4px 25px rgba(234, 88, 12, 0.5);
+  box-shadow: 0 4px 25px rgba(234, 88, 12, 0.55);
 }
 
 .sleek-btn-olive {
-  background-color: #3F4C2E;
-  color: #FFFFFF !important;
+  background-color: #607345;
+  color: #0A0D08;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.75rem;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 4px 20px rgba(63, 76, 46, 0.3);
+  box-shadow: 0 4px 20px rgba(96, 115, 69, 0.4);
 }
 
 .sleek-btn-olive:hover {
-  background-color: #5A6D42;
-  box-shadow: 0 4px 25px rgba(90, 109, 66, 0.45);
+  background-color: #829A5F;
+  box-shadow: 0 4px 25px rgba(130, 154, 95, 0.55);
 }
 
 .sleek-btn-secondary {
-  background-color: #F2EAE0;
-  border: 1px solid rgba(96, 115, 69, 0.28);
-  color: #2F3E26 !important;
+  background-color: rgba(96, 115, 69, 0.16);
+  border: 1px solid rgba(130, 154, 95, 0.35);
+  color: #B6CE95;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -337,9 +116,9 @@ select:focus {
 }
 
 .sleek-btn-secondary:hover {
-  background-color: rgba(234, 88, 12, 0.12);
+  background-color: rgba(96, 115, 69, 0.28);
   border-color: rgba(234, 88, 12, 0.5);
-  color: #C2410C !important;
+  color: #FF7A1A;
 }
 
 /* Custom Scrollbar */
@@ -349,14 +128,15 @@ select:focus {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F0E6D8;
+  background: #0A0D08;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C9BCAB;
+  background: #2D3722;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #EA580C;
+  background: #C2410C;
 }
+

@@ -50,24 +50,24 @@ export default function CursorGlow() {
       {/* Outer ambient olive & orange ring */}
       <motion.div
         aria-hidden="true"
-        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full"
+        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full mix-blend-screen"
         style={{
           x: smoothX,
           y: smoothY,
           translateX: '-50%',
           translateY: '-50%',
-          width: isHoveringClickable ? '64px' : '44px',
-          height: isHoveringClickable ? '64px' : '44px',
-          background: 'radial-gradient(circle, rgba(234, 88, 12, 0.12) 0%, rgba(96, 115, 69, 0.08) 50%, transparent 75%)',
-          border: isHoveringClickable ? '1.5px solid rgba(234, 88, 12, 0.7)' : '1px solid rgba(96, 115, 69, 0.35)',
-          boxShadow: '0 0 15px rgba(234, 88, 12, 0.15)',
+          width: isHoveringClickable ? '70px' : '48px',
+          height: isHoveringClickable ? '70px' : '48px',
+          background: 'radial-gradient(circle, rgba(234, 88, 12, 0.28) 0%, rgba(130, 154, 95, 0.15) 50%, transparent 75%)',
+          border: isHoveringClickable ? '1px solid rgba(234, 88, 12, 0.8)' : '1px solid rgba(130, 154, 95, 0.45)',
+          boxShadow: '0 0 15px rgba(234, 88, 12, 0.25)',
           transition: 'width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease',
         }}
       />
       {/* Central pinpoint star */}
       <motion.div
         aria-hidden="true"
-        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full bg-orange-600"
+        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full bg-orange-500"
         style={{
           x: mouseX,
           y: mouseY,
@@ -75,7 +75,7 @@ export default function CursorGlow() {
           translateY: '-50%',
           width: isHoveringClickable ? '6px' : '4px',
           height: isHoveringClickable ? '6px' : '4px',
-          boxShadow: '0 0 8px rgba(234, 88, 12, 0.6)',
+          boxShadow: '0 0 8px rgba(234, 88, 12, 0.8)',
           transition: 'width 0.15s ease, height 0.15s ease',
         }}
       />

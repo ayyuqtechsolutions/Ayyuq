@@ -3,7 +3,7 @@ import React from 'react';
 import SeoSchema from '../components/SeoSchema';
 
 export const viewport: Viewport = {
-  themeColor: '#FFFFFF',
+  themeColor: '#070A05',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -96,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="dark scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -106,11 +106,11 @@ export default function RootLayout({
         />
         <SeoSchema />
       </head>
-      <body className="min-h-screen bg-white text-[#162213] font-sans antialiased selection:bg-[#D95D39]/20 selection:text-[#162213]">
-        <div className="relative flex min-h-screen flex-col bg-white">
+      <body className="min-h-screen bg-[#070A05] text-[#FAFAFA] font-sans antialiased selection:bg-[#D95D39]/30 selection:text-[#FAFAFA]">
+        <div className="relative flex min-h-screen flex-col bg-[#070A05]">
           {/* Subtle brand glow accent */}
           <div
-            className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_top_right,rgba(217,93,57,0.04),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(58,77,57,0.06),transparent_60%)]"
+            className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_top_right,rgba(217,93,57,0.06),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(58,77,57,0.12),transparent_60%)]"
             aria-hidden="true"
           />
           <div className="relative z-10 flex flex-1 flex-col">{children}</div>

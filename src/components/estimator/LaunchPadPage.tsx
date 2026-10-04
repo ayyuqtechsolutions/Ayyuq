@@ -12,7 +12,7 @@ interface LaunchPadPageProps {
 
 export default function LaunchPadPage({ selectedSystemType }: LaunchPadPageProps) {
   return (
-    <div id="launch-pad-page" className="min-h-screen pt-32 sm:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
+    <div id="launch-pad-page" className="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-16">
         
         {/* PAGE HEADER */}

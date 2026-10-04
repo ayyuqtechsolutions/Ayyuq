@@ -104,7 +104,7 @@ export default function TeamPage({ onNavigate }: TeamPageProps) {
   };
 
   return (
-    <div id="team-founder-page" className="relative pt-32 sm:pt-36 pb-20 overflow-hidden">
+    <div id="team-founder-page" className="relative pt-24 sm:pt-28 pb-20 overflow-hidden">
       
       {/* Background Ambience Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[160px] pointer-events-none -z-10" />
