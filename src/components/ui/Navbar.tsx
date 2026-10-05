@@ -114,7 +114,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
           </nav>
 
           {/* Desktop Actions with Indian Time */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#141A10] border border-[#607345]/50 text-[#D8E8C5] text-xs font-mono font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-[#829A5F] animate-pulse" />
               <span className="text-orange-400 font-black">IST:</span>
@@ -129,17 +129,36 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
               <span>Get Estimate</span>
               <ArrowRight className="w-4 h-4 stroke-[2.5]" />
             </button>
+
+            <a
+              id="header-admin-btn"
+              href="https://admin.ayyuq.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2.5 border-2 border-[#607345]/50 bg-[#141A10] hover:bg-orange-600 hover:border-orange-500 hover:text-[#0A0D08] text-[#D8E8C5] text-xs uppercase tracking-wider font-black cursor-pointer transition-all rounded-xl flex items-center shadow-lg shadow-black/40"
+            >
+              <span>Admin</span>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="flex md:hidden items-center gap-2.5">
+          <div className="flex md:hidden items-center gap-2">
             <button
               id="header-mobile-scope-btn"
               onClick={() => handleNavClick('launch-pad')}
-              className="px-3.5 py-2 border-2 border-orange-500 bg-orange-600/20 text-orange-400 text-xs uppercase tracking-wider font-black hover:bg-orange-500 hover:text-[#0A0D08] rounded-xl"
+              className="px-3 py-2 border-2 border-orange-500 bg-orange-600/20 text-orange-400 text-xs uppercase tracking-wider font-black hover:bg-orange-500 hover:text-[#0A0D08] rounded-xl"
             >
               Estimate
             </button>
+            <a
+              id="header-mobile-admin-btn"
+              href="https://admin.ayyuq.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 border-2 border-[#607345]/50 bg-[#141A10] hover:bg-orange-600 hover:border-orange-500 hover:text-[#0A0D08] text-[#D8E8C5] text-xs uppercase tracking-wider font-black rounded-xl"
+            >
+              Admin
+            </a>
             <button
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -197,7 +216,17 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
               })}
             </div>
 
-            <div className="pt-2 border-t border-[#607345]/30">
+            <div className="pt-2 border-t border-[#607345]/30 space-y-2">
+              <a
+                id="mobile-nav-admin-btn"
+                href="https://admin.ayyuq.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 rounded-xl bg-[#141A10] hover:bg-[#1C2516] border border-[#607345]/40 text-[#D8E8C5] hover:text-orange-400 font-heading font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+              >
+                <span>Admin</span>
+              </a>
+
               <button
                 id="mobile-nav-briefing-btn"
                 onClick={() => handleNavClick('transmission')}
